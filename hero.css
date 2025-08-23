@@ -1,0 +1,141 @@
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 8%;
+    background: #0a0a0a;
+    /* dark background */
+    color: #fff;
+}
+
+/* Left Content */
+.hero-content {
+    max-width: 600px;
+    animation: slideIn 1s ease forwards;
+    opacity: 0;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h1 span {
+    color: #0ef;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 span {
+    color: #0ef;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-buttons .btn {
+    padding: 0.8rem 1.6rem;
+    background: #0ef;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    background: #08c;
+    transform: scale(1.05);
+}
+
+.hero-buttons .btn.secondary {
+    background: transparent;
+    border: 2px solid #0ef;
+    color: #0ef;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.hero-buttons .btn.secondary:hover {
+    background: #0ef;
+    color: #111;
+    transform: scale(1.05);
+}
+
+/* Right Image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 5px solid #0ef;
+    transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+}

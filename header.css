@@ -1,0 +1,125 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* Logo */
+.logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+    color: #0ef;
+    transform: scale(1.1);
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #0ef;
+    transform: translateY(-3px);
+}
+
+/* Hover underline animation */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #0ef;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* CTA Button */
+.cta a {
+    padding: 0.6rem 1.2rem;
+    background: #0ef;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta a:hover {
+    background: #08c;
+    transform: scale(1.05);
+}
+
+/* Mobile Menu Icon */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover span {
+    transform: scaleX(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}

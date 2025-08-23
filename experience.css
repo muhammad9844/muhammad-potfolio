@@ -1,0 +1,125 @@
+/* Experience Section */
+.experience {
+    padding: 5rem 8%;
+    background: #0a0a0a;
+    color: #fff;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0ef;
+}
+
+.experience p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    padding-left: 20px;
+    border-left: 3px solid #0ef;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 40px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
+}
+
+/* Dot */
+.timeline-dot {
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: #0ef;
+    border-radius: 50%;
+    border: 3px solid #111;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #0ef;
+}
+
+/* Content */
+.timeline-content {
+    background: #1a1a1a;
+    padding: 1.2rem;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    color: #0ef;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content span {
+    font-size: 0.9rem;
+    color: #aaa;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+.timeline-item:hover .timeline-content {
+    background: #222;
+    transform: scale(1.02);
+}
+
+/* Button */
+.experience .btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background: #0ef;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 2rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.experience .btn:hover {
+    background: #08c;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 15px;
+    }
+
+    .timeline-item {
+        padding-left: 30px;
+    }
+
+    .timeline-content {
+        text-align: center;
+    }
+}

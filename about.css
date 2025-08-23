@@ -1,0 +1,119 @@
+/* About Section */
+.about {
+    padding: 5rem 8%;
+    background: #111;
+    color: #fff;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+/* Left Side Image */
+.about-image img {
+    width: 300px;
+    border-radius: 15px;
+    border: 4px solid #0ef;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 0 25px #0ef;
+}
+
+/* Right Side Content */
+.about-content {
+    max-width: 600px;
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0ef;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    color: #ccc;
+}
+
+/* Info Boxes */
+.about-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.info-box {
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.info-box h3 {
+    font-size: 1rem;
+    color: #0ef;
+    margin-bottom: 0.5rem;
+}
+
+.info-box p {
+    color: #fff;
+}
+
+.info-box:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: #222;
+}
+
+/* Button */
+.about-content .btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background: #0ef;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-content .btn:hover {
+    background: #08c;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 220px;
+    }
+}
